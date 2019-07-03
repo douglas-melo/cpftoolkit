@@ -128,6 +128,21 @@ public final class CPFToolkit {
     }
 
     /**
+     * Retorna como String o código do erro:<p/>
+     *
+     * 1 - Para CPF nulo.<br/>
+     * 2 - Para CPF vazio.<br/>
+     * 3 - Para CPF com o padrão de dígitos inválido.<br/>
+     * 4 - Para CPF inválido.<br/>
+     *
+     * @return o código do erro como String.
+     * @throws AssertionCPFError se houver uma tentativa de validar um CPF que já é válido.
+     * */
+    public static String getCodeValue() {
+        return String.valueOf(getCode());
+    }
+
+    /**
      * Retorna o CPF validado sem formatação.
      *
      * @return o CPF validado sem formatação.
@@ -331,5 +346,17 @@ public final class CPFToolkit {
      * */
     public static int getSuccessCode() {
         return getSuccessStatus().getCode();
+    }
+
+    /**
+     * Retorna como String o código de sucesso de validação:<p/>
+     *
+     * 0 - Para CPF válido.
+     *
+     * @return o código de sucesso de validação como String.
+     * @throws IllegalCPFStateException se houver uma tentativa de chamar este método e o CPF for false.
+     * */
+    public static String getSuccessCodeValue() {
+        return String.valueOf(getSuccessCode());
     }
 }
