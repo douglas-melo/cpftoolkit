@@ -29,7 +29,7 @@ final class CPFPatternValidator {
      * Se der match com o REGEX retorna o CPF, caso contrário retorna
      * uma String vazia.
      *
-     * @param cpf o cpf.
+     * @param cpf o CPF.
      * @return o CPF ou uma String vazia.
      * */
     public static String validateCPFPattern(String cpf) {

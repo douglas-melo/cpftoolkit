@@ -10,12 +10,12 @@ import java.util.regex.Pattern;
  *
  * Os atributos serão configurados e validados até a obtenção do
  * estado válido do objeto. Além de ser um anti-pattern, nesse caso específico
- * algumas regras de convenção como nomeação de classes e métodos foram quebradas
+ * algumas regras de convenção como nomeação de métodos foram quebradas
  * para melhorar a legibidade do nome CPF.
  *
  * @author Douglas Melo
  * */
-final class CPF {
+final class Cpf {
 
     private String cpf;
     private CPFSuccessStatus cpfSuccessStatus;
@@ -27,7 +27,7 @@ final class CPF {
      *
      * @param cpf necessário para instanciar o objeto e inicializar o atributo.
      * */
-    CPF(String cpf) {
+    Cpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -109,7 +109,7 @@ final class CPF {
 
             // Configura a descrição do erro, passando o CPF com o padrão de dígitos inválido.
             CPFErrorStatus.INVALID_CPF_DIGITS_PATTERN.setDescription
-            ("O CPF " + getCPF() + " não possui um padrão de dígitos válido.");
+            ("O Cpf " + getCPF() + " não possui um padrão de dígitos válido.");
 
             // Configura o erro, atribuindo o tipo do enum.
             cpfErrorStatus = CPFErrorStatus.INVALID_CPF_DIGITS_PATTERN;

@@ -47,7 +47,7 @@ public final class CPFToolkit {
      * */
     public static boolean validateCPF(String cpf) {
 
-        cpfSetter = new CPFSetter(new CPF(cpf));
+        cpfSetter = new CPFSetter(new Cpf(cpf));
 
         boolean validationStatus = cpfSetter.validateCPF();
 
@@ -211,7 +211,7 @@ public final class CPFToolkit {
     /**
      * Retorna o CPF formatado no formato XXX.XXX.XXX-XX.
      *
-     * @param cpf o cpf.
+     * @param cpf o CPF.
      * @return o CPF formatado no formato XXX.XXX.XXX-XX.
      * @throws IllegalCPFPatternException caso o padrão de dígitos do CPF
      * estiver incorreto.
@@ -229,7 +229,7 @@ public final class CPFToolkit {
     /**
      * Retorna os três primeiros dígitos do CPF.
      *
-     * @param cpf o cpf.
+     * @param cpf o CPF.
      * @return os três primeiros dígitos do CPF
      * @throws IllegalCPFPatternException caso o padrão de dígitos do CPF
      * estiver incorreto.
@@ -247,9 +247,9 @@ public final class CPFToolkit {
     /**
      * Retorna os três dígitos do meio do CPF.
      *
-     * @param cpf o cpf
+     * @param cpf o CPF
      * @return os três dígitos do meio do CPF.
-     * @throws IllegalCPFPatternException caso o padrão de dígitos do CPF
+     * @throws IllegalCPFPatternException caso o padrão de dígitos do CPF.
      * estiver incorreto.
      * */
     public static String getMiddleThreeDigits(String cpf) {
@@ -265,9 +265,9 @@ public final class CPFToolkit {
     /**
      * Retorna os últimos três dígitos do CPF.
      *
-     * @param cpf o cpf
+     * @param cpf o CPF.
      * @return os últimos três dígitos do CPF.
-     * @throws IllegalCPFPatternException caso o padrão de dígitos do CPF
+     * @throws IllegalCPFPatternException caso o padrão de dígitos do CPF.
      * estiver incorreto.
      * */
     public static String getLastThreeDigits(String cpf) {
@@ -283,9 +283,9 @@ public final class CPFToolkit {
     /**
      * Retorna o dígito verificador do CPF.
      *
-     * @param cpf o cpf
+     * @param cpf o CPF.
      * @return o dígito verificador do CPF.
-     * @throws IllegalCPFPatternException caso o padrão de dígitos do CPF
+     * @throws IllegalCPFPatternException caso o padrão de dígitos do CPF.
      * estiver incorreto.
      * */
     public static String getCheckDigits(String cpf) {

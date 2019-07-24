@@ -11,7 +11,7 @@ import java.util.Optional;
  * */
 final class CPFSetter {
 
-    private CPF cpf;
+    private Cpf cpf;
     private String trustedCPF;
 
     /**
@@ -19,7 +19,7 @@ final class CPFSetter {
      *
      * @param cpf necessário para instanciar o objeto e inicializar o atributo.
      * */
-    CPFSetter(CPF cpf) {
+    CPFSetter(Cpf cpf) {
         this.cpf = cpf;
     }
 
