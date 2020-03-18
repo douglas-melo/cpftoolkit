@@ -37,7 +37,6 @@ final class CPFSetter {
      * com um CPF em estado válido.
      * */
     public void buildATrustedCPF() {
-
         if (cpf.isCPFValid()) {
             this.trustedCPF = cpf.getCPF();
         }
@@ -54,7 +53,6 @@ final class CPFSetter {
      * @throws IllegalCPFStateException se o Optional retornar vazio.
      * */
     public String getATrustedCPF() {
-
         Optional<String> getOptionalTrustedCPF = Optional.ofNullable(this.trustedCPF);
 
         return getOptionalTrustedCPF.orElseThrow(() ->
@@ -110,7 +108,6 @@ final class CPFSetter {
      * @throws AssertionError se houver uma tentativa de validar um CPF que já é válido.
      * */
     public CPFErrorStatus getErrorStatus() {
-
         if (cpf.isCPFValid()) {
             runAssertionCPFError();
         }
@@ -128,7 +125,6 @@ final class CPFSetter {
      * se houver uma tentativa de chamar este método e o CPF for false.
      * */
     public CPFSuccessStatus getSuccessStatus() {
-
         if (!cpf.isCPFValid()) {
             runIllegalCPFStateException(getErrorStatusDescription());
         }
