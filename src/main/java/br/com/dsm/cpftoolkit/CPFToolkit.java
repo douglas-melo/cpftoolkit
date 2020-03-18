@@ -46,7 +46,6 @@ public final class CPFToolkit {
      * @return o status booleano da validação do CPF.
      * */
     public static boolean validateCPF(String cpf) {
-
         cpfSetter = new CPFSetter(new Cpf(cpf));
 
         boolean validationStatus = cpfSetter.validateCPF();
@@ -217,7 +216,6 @@ public final class CPFToolkit {
      * estiver incorreto.
      * */
     public static String getFormattedCPF(String cpf) {
-
         String cpfValidated = CPFPatternValidator.validateCPFPattern(cpf);
 
         if (cpfValidated.isEmpty()) {
@@ -235,7 +233,6 @@ public final class CPFToolkit {
      * estiver incorreto.
      * */
     public static String getFirstThreeDigits(String cpf) {
-
         String cpfValidated = CPFPatternValidator.validateCPFPattern(cpf);
 
         if (cpfValidated.isEmpty()) {
@@ -253,7 +250,6 @@ public final class CPFToolkit {
      * estiver incorreto.
      * */
     public static String getMiddleThreeDigits(String cpf) {
-
         String cpfValidated = CPFPatternValidator.validateCPFPattern(cpf);
 
         if (cpfValidated.isEmpty()) {
@@ -271,7 +267,6 @@ public final class CPFToolkit {
      * estiver incorreto.
      * */
     public static String getLastThreeDigits(String cpf) {
-
         String cpfValidated = CPFPatternValidator.validateCPFPattern(cpf);
 
         if (cpfValidated.isEmpty()) {
@@ -289,7 +284,6 @@ public final class CPFToolkit {
      * estiver incorreto.
      * */
     public static String getCheckDigits(String cpf) {
-
         String cpfValidated = CPFPatternValidator.validateCPFPattern(cpf);
 
         if (cpfValidated.isEmpty()) {
