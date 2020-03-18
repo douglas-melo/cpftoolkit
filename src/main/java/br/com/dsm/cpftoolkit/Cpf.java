@@ -59,7 +59,6 @@ final class Cpf {
      * @return o status booleano da validação de dígitos nulos.
      * */
     private boolean validateNullCPFDigits() {
-
         boolean nullDigitsValidationStatus = this.getOptionalCPF().isPresent();
 
         if (!nullDigitsValidationStatus) {
@@ -77,7 +76,6 @@ final class Cpf {
      * @return o status booleano da validação de dígitos vazios.
      * */
     private boolean validateEmptyCPFDigits() {
-
         boolean emptyDigitsValidationStatus = !getCPF().isEmpty();
 
         if (!emptyDigitsValidationStatus) {
@@ -133,7 +131,6 @@ final class Cpf {
      * @return o status booleano da validação dos dígitos verificadores.
      * */
     private boolean validateCPFCheckDigits() {
-
         String checkDigits = getCPF().substring(9, 11);
         StringBuilder cpfWithoutCheckDigits = new StringBuilder(getCPF().substring(0, 9));
 
