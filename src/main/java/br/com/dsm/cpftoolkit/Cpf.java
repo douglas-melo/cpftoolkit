@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  *
  * Os atributos serão configurados e validados até a obtenção do
  * estado válido do objeto. Além de ser um anti-pattern, nesse caso específico
- * algumas regras de convenção como nomeação de métodos foram quebradas
+ * algumas regras de convenção como nomenclatura de métodos foram quebradas
  * para melhorar a legibidade do nome CPF.
  *
  * @author Douglas Melo
