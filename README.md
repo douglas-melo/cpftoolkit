@@ -14,6 +14,4 @@ todos os métodos da API permitem o formato XXX.XXX.XXX-XX.
 
 Segue um exemplo de como pode ser usada:
 
-<img src = "https://user-images.githubusercontent.com/12987598/60621284-a2599f00-9db3-11e9-873a-0cd2cb9e4c87.png" width="550">
-
 Consulte o javadoc para mais informações.
