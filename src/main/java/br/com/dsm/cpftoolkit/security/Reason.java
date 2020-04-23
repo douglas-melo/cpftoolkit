@@ -1,8 +1,8 @@
 package br.com.dsm.cpftoolkit.security;
 
 /*
- * Este enum implementa e contém os métodos para recuperar a causa,
- * que será configurada de acordo com o resultado da validação.
+ * Este enum implementa e contém os métodos para recuperar o motivo,
+ * que será configurado de acordo com o resultado da validação.
  */
 enum Reason {
 
