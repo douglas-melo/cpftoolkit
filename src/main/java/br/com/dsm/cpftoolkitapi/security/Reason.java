@@ -1,4 +1,4 @@
-package br.com.dsm.cpftoolkit.security;
+package br.com.dsm.cpftoolkitapi.security;
 
 /*
  * Este enum implementa e contém os métodos para recuperar o motivo,

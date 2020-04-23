@@ -1,4 +1,4 @@
-package br.com.dsm.cpftoolkit.security;
+package br.com.dsm.cpftoolkitapi.security;
 
 import java.util.ArrayList;
 import java.util.List;
