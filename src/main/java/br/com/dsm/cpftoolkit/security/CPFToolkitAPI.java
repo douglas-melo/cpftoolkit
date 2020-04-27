@@ -3,7 +3,7 @@ package br.com.dsm.cpftoolkit.security;
 /*
  * Esta API fornece os métodos utilitários para a validação do CPF.
  */
-final class CPFToolkitAPI {
+public final class CPFToolkitAPI {
 
     private CPFToolkitAPI() {
         throw new AssertionError("This class must not be instantiated.");
