@@ -1,4 +1,4 @@
-package br.com.dsm.cpftoolkitapi.security;
+package br.com.dsm.cpftoolkit.security;
 
 /*
  * Esta classe representa o CPF, a princípio inconsistente, que

@@ -1,4 +1,4 @@
-package br.com.dsm.cpftoolkitapi.security;
+package br.com.dsm.cpftoolkit.security;
 
 /*
  * Esta classe fornece o motivo válido caso a validação do dígito verificador

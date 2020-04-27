@@ -1,4 +1,4 @@
-package br.com.dsm.cpftoolkitapi.security;
+package br.com.dsm.cpftoolkit.security;
 
 /*
  * Classe para validar os dígitos empty do CPF inconsistente.
