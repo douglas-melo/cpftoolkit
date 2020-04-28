@@ -14,13 +14,9 @@ final class EmptyValidator implements EvaluableCPF {
         this.cpf = cpf;
     }
 
-    private String getCPF() {
-        return cpf.getCPF().replaceAll("[\\s]", "");
-    }
-
     @Override
     public int validateDigits() {
-        return !getCPF().isEmpty() ? 0 : 1;
+        return !cpf.getCPF().trim().isEmpty() ? 0 : 1;
     }
 
     @Override
