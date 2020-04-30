@@ -17,7 +17,7 @@ public final class CPFToolkitAuth {
                 .report();
     }
 
-    public boolean getValidationStatus() {
+    public boolean isCPFValid() {
         return statusProvider.provideStatus();
     }
 
