@@ -13,7 +13,7 @@ final class MessageBus {
     }
 
     public String getSuccessMessage() {
-        return "O CPF informado é válido.";
+        return "O CPF " + cpf.getCPF() + " é válido.";
     }
 
     public String getNullMessage() {
