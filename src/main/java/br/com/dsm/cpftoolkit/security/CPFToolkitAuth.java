@@ -1,41 +1,39 @@
 package br.com.dsm.cpftoolkit.security;
 
 /*
- * Esta API fornece os métodos utilitários para a validação do CPF.
+ * Esta classe fornece os métodos para a validação do CPF.
  */
 public final class CPFToolkitAuth {
 
-    private CPFToolkitAuth() {
-        throw new AssertionError("This class must not be instantiated.");
-    }
+    private StatusProvider statusProvider;
 
-    private static StatusProvider statusProvider(String cpf) {
-        return StatusProvider
-                .configureCPF(cpf)
+    CPFToolkitAuth(String cpf) {
+        statusProvider = new StatusReporter(cpf)
                 .putUnstrustedCPF()
                 .putUnstrustedCPFValidator()
                 .putReasonProvider()
                 .putMessageBus()
-                .putMessageReporter();
+                .putMessageReporter()
+                .report();
     }
 
-    public static boolean isCPFTrusted(String cpf) {
-        return statusProvider(cpf).provideStatus();
+    public boolean getValidationStatus() {
+        return statusProvider.provideStatus();
     }
 
-    public static Reason getReason(String cpf) {
-        return statusProvider(cpf).provideReason();
+    public String getReason() {
+        return statusProvider.provideReason();
     }
 
-    public static String getReasonToJSON(String cpf) {
-        return statusProvider(cpf).provideReason().toString().toLowerCase().replaceAll("[_]", "");
+    public String getReasonToJSON() {
+        return statusProvider.provideReason().toLowerCase().replaceAll("[_]", "");
     }
 
-    public static int getCode(String cpf) {
-        return statusProvider(cpf).provideCode();
+    public int getCode() {
+        return statusProvider.provideCode();
     }
 
-    public static String getMessage(String cpf) {
-        return statusProvider(cpf).provideMessage();
+    public String getMessage() {
+        return statusProvider.provideMessage();
     }
 }
