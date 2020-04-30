@@ -7,7 +7,7 @@ public final class CPFToolkitAuth {
 
     private StatusProvider statusProvider;
 
-    CPFToolkitAuth(String cpf) {
+    public CPFToolkitAuth(String cpf) {
         statusProvider = new StatusReporter(cpf)
                 .putUnstrustedCPF()
                 .putUnstrustedCPFValidator()
