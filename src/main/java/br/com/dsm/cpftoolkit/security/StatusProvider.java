@@ -1,54 +1,21 @@
 package br.com.dsm.cpftoolkit.security;
 
 /*
- * Esta classe agrupa e instancia as dependências.
- * Fornece o motivo, mensagem de descrição, e o código da validação,
+ * Esta classe fornece o motivo, mensagem de descrição, e o código da validação,
  * que serão consumidos pela API.
  */
 final class StatusProvider {
 
-    private String cpf;
-    private UntrustedCPF untrustedCPF;
-    private UntrustedCPFValidator untrustedCPFValidator;
     private ReasonProvider reasonProvider;
-    private MessageBus messageBus;
     private MessageReporter messageReporter;
 
-    private StatusProvider(String cpf) {
-        this.cpf = cpf;
+    StatusProvider(ReasonProvider reasonProvider, MessageReporter messageReporter) {
+        this.reasonProvider = reasonProvider;
+        this.messageReporter = messageReporter;
     }
 
-    public static StatusProvider configureCPF(String cpf) {
-        return new StatusProvider(cpf);
-    }
-
-    public StatusProvider putUnstrustedCPF() {
-        untrustedCPF = new UntrustedCPF(cpf);
-        return this;
-    }
-
-    public StatusProvider putUnstrustedCPFValidator() {
-        untrustedCPFValidator = new UntrustedCPFValidator(untrustedCPF);
-        return this;
-    }
-
-    public StatusProvider putReasonProvider() {
-        reasonProvider = new ReasonProvider(untrustedCPFValidator);
-        return this;
-    }
-
-    public StatusProvider putMessageBus() {
-        messageBus = new MessageBus(untrustedCPF);
-        return this;
-    }
-
-    public StatusProvider putMessageReporter() {
-        messageReporter = new MessageReporter(reasonProvider, messageBus);
-        return this;
-    }
-
-    public Reason provideReason() {
-        return reasonProvider.getReason();
+    public String provideReason() {
+        return reasonProvider.getReason().toString();
     }
 
     public boolean provideStatus() {
