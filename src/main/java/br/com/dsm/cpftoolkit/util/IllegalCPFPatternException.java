@@ -8,7 +8,7 @@ public final class IllegalCPFPatternException extends IllegalCPFArgumentExceptio
 
     private static final long serialVersionUID = 4280132351419811186L;
 
-    IllegalCPFPatternException(String message) {
+    public IllegalCPFPatternException(String message) {
         super(message);
     }
 }

@@ -8,7 +8,7 @@ public class IllegalCPFArgumentException extends IllegalArgumentException {
 
     private static final long serialVersionUID = 4479187854237180518L;
 
-    IllegalCPFArgumentException(String message) {
+    public IllegalCPFArgumentException(String message) {
         super(message);
     }
 }
