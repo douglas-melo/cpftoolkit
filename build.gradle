@@ -17,5 +17,5 @@ repositories {
 
 dependencies {
     testImplementation('junit:junit:4.13')
-    implementation 'com.github.douglas-melo:cpftoolkit:v0.1.0-beta'
+    implementation 'com.github.douglas-melo:cpftoolkit:0.1.0-beta'
 }
