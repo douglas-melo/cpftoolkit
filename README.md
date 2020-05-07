@@ -9,7 +9,7 @@ o código, e a mensagem com a descrição do erro. Você poderá recuperá-los a
 Além do padrão sem formatação com 11 dígitos XXXXXXXXXXX incluindo o dígito verificador, 
 o construtor e todos os métodos da API permitem CPF com o formato no padrão XXX.XXX.XXX-XX.
 
-### Utilização
+### API para validação
 ```java
 import br.com.dsm.cpftoolkit.security.CPFToolkitAuth;
 
@@ -61,3 +61,22 @@ CPFToolkitFormatter.removeDelimiter(cpf);
 78
 12332145678
 ```
+### Dependências
+* [Java 8](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
+* [Gradle](https://github.com/gradle/gradle)
+* [JUnit 4.13](https://github.com/junit-team/junit4)
+* [JitPack](https://github.com/jitpack/jitpack.io)
+
+### Utilização
+Para utilizar, adicione o repositório maven do JitPack à sua lista de repositórios, e adicione este repositório do GitHub  
+à sua lista de depedências no seu arquivo `build.gradle` conforme abaixo:
+```
+   repositories {
+        maven { url "https://jitpack.io" }
+   }
+
+   dependencies {
+        implementation 'com.github.douglas-melo:cpftoolkit:0.1.0-beta'
+   }
+```
+Thanks for that [JitPack](https://github.com/jitpack/jitpack.io)! :)
