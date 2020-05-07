@@ -72,7 +72,7 @@ Para utilizar, adicione o repositório maven do JitPack à sua lista de reposit�
 à sua lista de depedências no seu arquivo `build.gradle` conforme abaixo:
 ```
    repositories {
-        maven { url "https://jitpack.io" }
+        maven { url 'https://jitpack.io' }
    }
 
    dependencies {
