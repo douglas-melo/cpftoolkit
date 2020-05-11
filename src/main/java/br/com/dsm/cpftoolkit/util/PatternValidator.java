@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  */
 public final class PatternValidator {
 
-    private String cpf;
+    private final String cpf;
 
     private PatternValidator(String cpf) {
         this.cpf = checkPatternConsistency(checkEmptyOccurrences(checkNullOccurrences(cpf)));
