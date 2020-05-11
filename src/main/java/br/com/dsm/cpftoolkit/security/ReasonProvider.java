@@ -16,7 +16,7 @@ final class ReasonProvider {
     }
 
     private void registerCause() {
-        reason = untrustedCPFValidator.findForOccurence().getReason();
+        reason = untrustedCPFValidator.findForOccurrence().getReason();
     }
 
     public Reason getReason() {

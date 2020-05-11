@@ -36,7 +36,7 @@ final class UntrustedCPFValidator {
         occurrence = evaluableDigits.stream().filter(p -> p.validateDigits() == 1).findFirst().orElseGet(AcceptedCheckDigit::new);
     }
 
-    public EvaluableCPF findForOccurence() {
+    public EvaluableCPF findForOccurrence() {
         return occurrence;
     }
 }
