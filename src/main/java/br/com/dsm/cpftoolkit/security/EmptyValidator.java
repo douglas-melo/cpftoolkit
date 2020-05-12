@@ -8,7 +8,7 @@ package br.com.dsm.cpftoolkit.security;
  */
 final class EmptyValidator implements EvaluableCPF {
 
-    private UntrustedCPF cpf;
+    private final UntrustedCPF cpf;
 
     EmptyValidator(UntrustedCPF cpf) {
         this.cpf = cpf;

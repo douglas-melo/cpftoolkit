@@ -10,7 +10,7 @@ import java.util.Optional;
  */
 final class NullValidator implements EvaluableCPF {
 
-    private UntrustedCPF cpf;
+    private final UntrustedCPF cpf;
 
     NullValidator(UntrustedCPF cpf) {
         this.cpf = cpf;

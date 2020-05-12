@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  */
 final class PatternValidator implements EvaluableCPF {
 
-    private UntrustedCPF cpf;
+    private final UntrustedCPF cpf;
 
     PatternValidator(UntrustedCPF cpf) {
         this.cpf = cpf;

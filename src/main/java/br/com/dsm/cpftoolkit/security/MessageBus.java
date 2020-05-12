@@ -6,7 +6,7 @@ package br.com.dsm.cpftoolkit.security;
  */
 final class MessageBus {
 
-    private UntrustedCPF cpf;
+    private final UntrustedCPF cpf;
 
     MessageBus(UntrustedCPF cpf) {
         this.cpf = cpf;

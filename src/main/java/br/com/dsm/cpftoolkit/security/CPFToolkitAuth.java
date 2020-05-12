@@ -7,7 +7,7 @@ package br.com.dsm.cpftoolkit.security;
  */
 public final class CPFToolkitAuth {
 
-    private StatusProvider statusProvider;
+    private final StatusProvider statusProvider;
 
     /**
      * Constrói o objeto e inicializa o atributo.
@@ -83,7 +83,7 @@ public final class CPFToolkitAuth {
      * Retorna uma mensagem com a descrição do status da validação.
      * @return Uma String como mensagem de descrição do status da validação.
      */
-    public String getMessqage() {
+    public String getMessage() {
         return statusProvider.provideMessage();
     }
 }

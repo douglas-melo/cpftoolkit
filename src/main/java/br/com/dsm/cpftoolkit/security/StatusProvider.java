@@ -6,8 +6,8 @@ package br.com.dsm.cpftoolkit.security;
  */
 final class StatusProvider {
 
-    private ReasonProvider reasonProvider;
-    private MessageReporter messageReporter;
+    private final ReasonProvider reasonProvider;
+    private final MessageReporter messageReporter;
 
     StatusProvider(ReasonProvider reasonProvider, MessageReporter messageReporter) {
         this.reasonProvider = reasonProvider;

@@ -12,8 +12,8 @@ enum Reason {
     INVALID_PATTERN(3, false),
     INVALID_CPF(4, false);
 
-    private int code;
-    private boolean status;
+    final private int code;
+    final private boolean status;
 
     Reason(int code, boolean status) {
         this.code = code;

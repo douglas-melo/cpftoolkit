@@ -9,8 +9,8 @@ import java.util.Map;
  */
 final class MessageReporter {
 
-    private ReasonProvider reasonProvider;
-    private MessageBus messageBus;
+    private final ReasonProvider reasonProvider;
+    private final MessageBus messageBus;
     private String message;
 
     MessageReporter(ReasonProvider reasonProvider, MessageBus messageBus) {

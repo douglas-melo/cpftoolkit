@@ -6,7 +6,7 @@ package br.com.dsm.cpftoolkit.security;
  */
 final class UntrustedCPF {
 
-    private String cpf;
+    private final String cpf;
 
     UntrustedCPF(String cpf) {
         this.cpf = cpf;

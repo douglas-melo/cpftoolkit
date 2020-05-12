@@ -7,7 +7,7 @@ package br.com.dsm.cpftoolkit.security;
 final class ReasonProvider {
 
     private Reason reason;
-    private UntrustedCPFValidator untrustedCPFValidator;
+    private final UntrustedCPFValidator untrustedCPFValidator;
 
     ReasonProvider(UntrustedCPFValidator untrustedCPFValidator) {
         this.untrustedCPFValidator = untrustedCPFValidator;

@@ -6,7 +6,7 @@ package br.com.dsm.cpftoolkit.security;
  */
 final class StatusReporter {
 
-    private String cpf;
+    private final String cpf;
     private UntrustedCPF untrustedCPF;
     private UntrustedCPFValidator untrustedCPFValidator;
     private ReasonProvider reasonProvider;
