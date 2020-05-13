@@ -13,14 +13,18 @@ o construtor e todos os métodos da API permitem CPF com o formato no padrão XX
 ```java
 import br.com.dsm.cpftoolkit.security.CPFToolkitAuth;
 
-String invalidCPF = "123.321.456-78";
+public class App {
+    public static void main(String[] args) {
+        String invalidCPF = "123.321.456-78";
 
-CPFToolkitAuth cpfToolkitAuth = new CPFToolkitAuth(invalidCPF);
-cpfToolkitAuth.isCPFValid();
-cpfToolkitAuth.getReason();
-cpfToolkitAuth.getReasonToJSON();
-cpfToolkitAuth.getCode();
-cpfToolkitAuth.getMessage();
+        CPFToolkitAuth cpfToolkitAuth = new CPFToolkitAuth(invalidCPF);
+        cpfToolkitAuth.isCPFValid();
+        cpfToolkitAuth.getReason();
+        cpfToolkitAuth.getReasonToJSON();
+        cpfToolkitAuth.getCode();
+        cpfToolkitAuth.getMessage();
+    }
+}
 ```
 ##### Output:
 ```bash
@@ -30,6 +34,7 @@ invalidcpf
 4
 O CPF 123.321.456-78 é inválido. Não foi possível calcular o dígito verificador.
 ```
+
 *Tabela de validação.*
 | Código |       Motivo      |       JSON       |  Status |
 |:------:|:-----------------:|:----------------:|:-------:|
@@ -38,19 +43,24 @@ O CPF 123.321.456-78 é inválido. Não foi possível calcular o dígito verific
 |   `2`  |    `EMPTY_CPF`    |    `emptycpf`    | `false` |
 |   `3`  | `INVALID_PATTERN` | `invalidpattern` | `false` |
 |   `4`  |   `INVALID_CPF`   |   `invalidcpf`   | `false` |
+
 ### API Helper
 *API para o tratamento e formatação dos dígitos.*
 ```java
 import br.com.dsm.cpftoolkit.util.CPFToolkitFormatter;
 
-String cpf = "12332145678";
+public class App {
+    public static void main(String[] args) {
+        String cpf = "12332145678";
 
-CPFToolkitFormatter.insertDelimiter(cpf);
-CPFToolkitFormatter.getFirstThreeDigits(cpf);
-CPFToolkitFormatter.getMiddleThreeDigits(cpf);
-CPFToolkitFormatter.getLastThreeDigits(cpf);
-CPFToolkitFormatter.getCheckDigit(cpf);
-CPFToolkitFormatter.removeDelimiter(cpf);
+        CPFToolkitFormatter.insertDelimiter(cpf);
+        CPFToolkitFormatter.getFirstThreeDigits(cpf);
+        CPFToolkitFormatter.getMiddleThreeDigits(cpf);
+        CPFToolkitFormatter.getLastThreeDigits(cpf);
+        CPFToolkitFormatter.getCheckDigit(cpf);
+        CPFToolkitFormatter.removeDelimiter(cpf);
+    }
+}
 ```
 ##### Output:
 ```bash
@@ -61,6 +71,7 @@ CPFToolkitFormatter.removeDelimiter(cpf);
 78
 12332145678
 ```
+
 ### Dependências
 * [Java 8](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
 * [Gradle](https://github.com/gradle/gradle)
@@ -70,9 +81,10 @@ CPFToolkitFormatter.removeDelimiter(cpf);
 ### Utilização
 Para utilizar, adicione o repositório maven do JitPack à sua lista de repositórios, e adicione este repositório do GitHub  
 à sua lista de depedências no seu arquivo `build.gradle` conforme abaixo:
+
 ```
    repositories {
-        maven { url 'https://jitpack.io' }
+        maven { url "https://jitpack.io" }
    }
 
    dependencies {
