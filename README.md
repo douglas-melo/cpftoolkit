@@ -79,8 +79,7 @@ public class App {
 * [JitPack](https://github.com/jitpack/jitpack.io)
 
 ### Utilização
-Para utilizar, adicione o repositório maven do JitPack à sua lista de repositórios, e adicione este repositório do GitHub  
-à sua lista de depedências no seu arquivo `build.gradle` conforme abaixo:
+Para utilizar, adicione o repositório maven do JitPack à sua lista de repositórios, e adicione este repositório do GitHub à sua lista de depedências no seu arquivo `build.gradle` conforme abaixo:
 
 ```
    repositories {
