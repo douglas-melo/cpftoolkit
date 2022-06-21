@@ -18,10 +18,6 @@ final class PatternHandler implements EvaluableCPF {
         this.cpf = cpf;
     }
 
-    private String getCPF() {
-        return cpf.getCPF().replaceAll("[\\s.\\-]", "");
-    }
-
     @Override
     public int validateDigits() {
         return Pattern.matches("^(\\d)(?!\\1+$)\\d{10}$", cpf.getCPFWithoutDelimiter()) ? 0 : 1;
