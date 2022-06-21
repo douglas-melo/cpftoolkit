@@ -24,8 +24,7 @@ final class PatternHandler implements EvaluableCPF {
 
     @Override
     public int validateDigits() {
-        final String CPF_REGEX_PATTERN = "^(\\d)(?!\\1+$)\\d{10}$";
-        return Pattern.matches(CPF_REGEX_PATTERN, getCPF()) ? 0 : 1;
+        return Pattern.matches("^(\\d)(?!\\1+$)\\d{10}$", cpf.getCPFWithoutDelimiter()) ? 0 : 1;
     }
 
     @Override
