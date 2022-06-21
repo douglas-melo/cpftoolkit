@@ -6,11 +6,11 @@ package br.com.dsm.cpftoolkit.security;
  * Possui os métodos para validar os dígitos empty a fim
  * de obter um CPF consistente.
  */
-final class EmptyValidator implements EvaluableCPF {
+final class EmptyHandler implements EvaluableCPF {
 
     private final UntrustedCPF cpf;
 
-    EmptyValidator(UntrustedCPF cpf) {
+    EmptyHandler(UntrustedCPF cpf) {
         this.cpf = cpf;
     }
 
