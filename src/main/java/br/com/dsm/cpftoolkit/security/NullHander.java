@@ -8,11 +8,11 @@ import java.util.Optional;
  * Possui os métodos para validar os dígitos null a fim
  * de obter um CPF consistente.
  */
-final class NullValidator implements EvaluableCPF {
+final class NullHander implements EvaluableCPF {
 
     private final UntrustedCPF cpf;
 
-    NullValidator(UntrustedCPF cpf) {
+    NullHander(UntrustedCPF cpf) {
         this.cpf = cpf;
     }
 
