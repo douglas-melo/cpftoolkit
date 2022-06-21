@@ -8,11 +8,11 @@ import java.util.regex.Pattern;
  * O REGEX captura somente dígitos, 11 dígitos, com o range entre [0-9],
  * os dígitos definidos no range não podem se repetir todas às 11 vezes.
  */
-final class PatternValidator implements EvaluableCPF {
+final class PatternHandler implements EvaluableCPF {
 
     private final UntrustedCPF cpf;
 
-    PatternValidator(UntrustedCPF cpf) {
+    PatternHandler(UntrustedCPF cpf) {
         this.cpf = cpf;
     }
 
