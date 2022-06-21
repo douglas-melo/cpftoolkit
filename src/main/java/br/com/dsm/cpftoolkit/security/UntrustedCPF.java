@@ -12,6 +12,10 @@ final class UntrustedCPF {
         this.cpf = cpf;
     }
 
+    public String getCPFWithoutDelimiter() {
+        return cpf.replaceAll("[\\s.\\-]", "");
+    }
+
     public String getCPF() {
         return cpf;
     }
