@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Possui os métodos para validar o dígito verificador a fim
  * de verificar a consistência do CPF.
  */
-class CheckDigitValidator implements EvaluableCPF {
+class CheckDigitValidator {
 
     private UntrustedCPF cpf;
 
