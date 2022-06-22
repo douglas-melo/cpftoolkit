@@ -12,7 +12,7 @@ class CheckDigitValidator {
 
     private final String cpf;
 
-    CheckDigitValidator(UntrustedCPF cpf) {
+    CheckDigitValidator(String cpf) {
         this.cpf = cpf;
     }
 
