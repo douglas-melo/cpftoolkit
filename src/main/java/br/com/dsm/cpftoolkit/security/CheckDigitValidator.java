@@ -16,10 +16,6 @@ class CheckDigitValidator {
         this.cpf = cpf;
     }
 
-    private String getCPF() {
-        return cpf.getCPF().replaceAll("[\\s.\\-]", "");
-    }
-
     @Override
     final public int validateDigits() {
         return getCPFCheckDigits().equals(getFirstCheckDigit() + "" + getSecondCheckDigit()) ? 0 : 1;
