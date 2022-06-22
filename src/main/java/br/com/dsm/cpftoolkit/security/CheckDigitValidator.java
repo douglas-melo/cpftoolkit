@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 class CheckDigitValidator {
 
-    private UntrustedCPF cpf;
+    private final String cpf;
 
     CheckDigitValidator(UntrustedCPF cpf) {
         this.cpf = cpf;
