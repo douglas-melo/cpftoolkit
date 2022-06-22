@@ -12,8 +12,6 @@ class CheckDigitValidator implements EvaluableCPF {
 
     private UntrustedCPF cpf;
 
-    CheckDigitValidator() {}
-
     CheckDigitValidator(UntrustedCPF cpf) {
         this.cpf = cpf;
     }
