@@ -8,11 +8,11 @@ import java.util.Arrays;
  * Possui os métodos para validar o dígito verificador a fim
  * de verificar a consistência do CPF.
  */
-class CheckDigitValidator {
+class CheckDigitChecker {
 
     private final String cpf;
 
-    CheckDigitValidator(String cpf) {
+    CheckDigitChecker(String cpf) {
         this.cpf = cpf;
     }
 
