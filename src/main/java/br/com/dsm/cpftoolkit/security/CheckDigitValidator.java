@@ -16,8 +16,7 @@ class CheckDigitValidator {
         this.cpf = cpf;
     }
 
-    @Override
-    final public int validateDigits() {
+    final public int validateCheckDigit() {
         return getCPFCheckDigits().equals(getFirstCheckDigit() + "" + getSecondCheckDigit()) ? 0 : 1;
     }
 
