@@ -64,9 +64,4 @@ class CheckDigitValidator {
         int secondCheckDigit = reduceCPFDigits(digits) % 11;
         return applyRemainderOperation(secondCheckDigit);
     }
-
-    @Override
-    public Reason getReason() {
-        return Reason.INVALID_CPF;
-    }
 }
