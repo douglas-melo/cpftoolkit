@@ -22,11 +22,11 @@ class CheckDigitValidator {
     }
 
     private String getCPFCheckDigits() {
-        return getCPF().substring(9, 11);
+        return cpf.substring(9, 11);
     }
 
     private String getCPFWithoutCheckDigits() {
-        return getCPF().substring(0, 9);
+        return cpf.substring(0, 9);
     }
 
     private String getCPFWithFirstCheckDigit() {
