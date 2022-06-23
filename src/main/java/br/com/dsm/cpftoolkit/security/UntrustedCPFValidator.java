@@ -13,7 +13,7 @@ final class UntrustedCPFValidator {
 
     private final UntrustedCPF cpf;
     private List<EvaluableCPF> evaluableDigits;
-    private EvaluableCPF occurrence;
+    private Reason reason;
 
     UntrustedCPFValidator(UntrustedCPF cpf) {
         this.cpf = cpf;
