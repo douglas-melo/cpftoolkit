@@ -39,7 +39,7 @@ final class UntrustedCPFValidator {
                 .orElse(Reason.TRUSTED_CPF);
     }
 
-    public EvaluableCPF findForOccurrence() {
-        return occurrence;
+    public Reason getReason() {
+        return reason;
     }
 }
