@@ -18,18 +18,18 @@ final class UntrustedCPFValidator {
     UntrustedCPFValidator(UntrustedCPF cpf) {
         this.cpf = cpf;
 
-        loadEvaluableDigitsRepository();
+        listOfHandlers();
         setOccurrence();
     }
 
-    private void loadEvaluableDigitsRepository() {
-        ArrayList<EvaluableCPF> evaluableDigitsRepository = new ArrayList<>();
-        evaluableDigitsRepository.add(new NullValidator(cpf));
-        evaluableDigitsRepository.add(new EmptyValidator(cpf));
-        evaluableDigitsRepository.add(new PatternValidator(cpf));
-        evaluableDigitsRepository.add(new CheckDigitValidator(cpf));
+    private List<EvaluableCPF> listOfHandlers() {
+        ArrayList<EvaluableCPF> listOfHandlers = new ArrayList<>();
+        listOfHandlers.add(new NullHander(cpf));
+        listOfHandlers.add(new EmptyHandler(cpf));
+        listOfHandlers.add(new PatternHandler(cpf));
+        listOfHandlers.add(new CheckDigitHandler(cpf));
 
-        evaluableDigits = evaluableDigitsRepository;
+        return listOfHandlers;
     }
 
     private void setOccurrence() {
