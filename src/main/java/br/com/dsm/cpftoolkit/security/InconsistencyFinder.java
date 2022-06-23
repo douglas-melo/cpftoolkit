@@ -6,7 +6,7 @@ import java.util.List;
 /*
  * Classe para validar o CPF inconsistente.
  *
- * Agrupa as classes validadoras dos dígitos, e faz a checagem em cada objeto
+ * Agrupa as classes manipuladoras dos dígitos, e faz a checagem em cada objeto
  * em busca de inconsistências.
  */
 final class InconsistencyFinder {
