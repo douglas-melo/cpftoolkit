@@ -12,7 +12,6 @@ import java.util.List;
 final class UntrustedCPFValidator {
 
     private final UntrustedCPF cpf;
-    private List<EvaluableCPF> evaluableDigits;
     private Reason reason;
 
     UntrustedCPFValidator(UntrustedCPF cpf) {
