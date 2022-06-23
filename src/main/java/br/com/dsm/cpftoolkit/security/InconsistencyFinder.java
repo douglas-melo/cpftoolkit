@@ -9,12 +9,12 @@ import java.util.List;
  * Agrupa as classes validadoras dos dígitos, e faz a checagem em cada objeto
  * em busca de inconsistências.
  */
-final class UntrustedCPFValidator {
+final class InconsistencyFinder {
 
     private final UntrustedCPF cpf;
     private Reason reason;
 
-    UntrustedCPFValidator(UntrustedCPF cpf) {
+    InconsistencyFinder(UntrustedCPF cpf) {
         this.cpf = cpf;
 
         findForInconsistency();
