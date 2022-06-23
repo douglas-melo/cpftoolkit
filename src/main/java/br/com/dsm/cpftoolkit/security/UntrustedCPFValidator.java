@@ -17,7 +17,6 @@ final class UntrustedCPFValidator {
     UntrustedCPFValidator(UntrustedCPF cpf) {
         this.cpf = cpf;
 
-        listOfHandlers();
         findForInconsistency();
     }
 
