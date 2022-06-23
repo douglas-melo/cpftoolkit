@@ -19,7 +19,7 @@ final class UntrustedCPFValidator {
         this.cpf = cpf;
 
         listOfHandlers();
-        setOccurrence();
+        findForInconsistency();
     }
 
     private List<EvaluableCPF> listOfHandlers() {
@@ -32,8 +32,13 @@ final class UntrustedCPFValidator {
         return listOfHandlers;
     }
 
-    private void setOccurrence() {
-        occurrence = evaluableDigits.stream().filter(p -> p.validateDigits() == 1).findFirst().orElseGet(AcceptedCheckDigit::new);
+    private void findForInconsistency() {
+        reason = listOfHandlers()
+                .stream()
+                .filter(e -> e.validateDigits() == 1)
+                .map(e -> e.getReason())
+                .findFirst()
+                .orElse(Reason.TRUSTED_CPF);
     }
 
     public EvaluableCPF findForOccurrence() {
