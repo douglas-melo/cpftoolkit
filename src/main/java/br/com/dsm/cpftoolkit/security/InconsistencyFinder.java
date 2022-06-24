@@ -22,6 +22,7 @@ final class InconsistencyFinder {
 
     private List<EvaluableCPF> listOfHandlers() {
         ArrayList<EvaluableCPF> listOfHandlers = new ArrayList<>();
+
         listOfHandlers.add(new NullHander(cpf));
         listOfHandlers.add(new EmptyHandler(cpf));
         listOfHandlers.add(new PatternHandler(cpf));
