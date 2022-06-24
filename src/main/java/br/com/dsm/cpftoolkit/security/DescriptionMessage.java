@@ -4,11 +4,11 @@ package br.com.dsm.cpftoolkit.security;
  * Esta classe contém os métodos para recuperar a mensagem de
  * descrição da validação.
  */
-final class MessageBus {
+final class DescriptionMessage {
 
     private final UntrustedCPF cpf;
 
-    MessageBus(UntrustedCPF cpf) {
+    DescriptionMessage(UntrustedCPF cpf) {
         this.cpf = cpf;
     }
 
