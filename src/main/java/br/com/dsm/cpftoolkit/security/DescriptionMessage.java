@@ -12,23 +12,23 @@ final class DescriptionMessage {
         this.cpf = cpf;
     }
 
-    public String getSuccessMessage() {
+    public String getTrustedCPFMessage() {
         return "O CPF " + cpf.getCPF() + " é válido.";
     }
 
-    public String getNullMessage() {
+    public String getNullCPFMessage() {
         return "O CPF informado é nulo.";
     }
 
-    public String getEmptyMessage() {
+    public String getEmptyCPFMessage() {
         return "O CPF informado é vazio.";
     }
 
-    public String getPatternMessage() {
+    public String getInvalidCPFPatternMessage() {
         return "O CPF " + cpf.getCPF() + " não possui um padrão de dígitos válido.";
     }
 
-    public String getCheckDigitsMessage() {
+    public String getInvalidCPFMessage() {
         return "O CPF " + cpf.getCPF() + " é inválido. Não foi possível calcular o dígito verificador.";
     }
 }
