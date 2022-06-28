@@ -9,13 +9,13 @@ import java.util.Map;
  */
 final class DescriptionAppender {
 
-    private final ReasonProvider reasonProvider;
-    private final MessageBus messageBus;
+    private final InconsistencyFinder inconsistencyFinder;
+    private final DescriptionMessage descriptionMessage;
     private String message;
 
-    DescriptionAppender(ReasonProvider reasonProvider, MessageBus messageBus) {
-        this.reasonProvider = reasonProvider;
-        this.messageBus = messageBus;
+    DescriptionAppender(InconsistencyFinder inconsistencyFinder, DescriptionMessage descriptionMessage) {
+        this.inconsistencyFinder = inconsistencyFinder;
+        this.descriptionMessage = descriptionMessage;
     }
 
     private void loadMessageCatalog() {
