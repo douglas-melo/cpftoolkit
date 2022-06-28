@@ -30,7 +30,7 @@ final class DescriptionAppender {
         return descriptionByReason.get(inconsistencyFinder.getReason());
     }
 
-    public String reportMessage() {
-        return message;
+    public String getDescription() {
+        return findDescriptionByReason();
     }
 }
