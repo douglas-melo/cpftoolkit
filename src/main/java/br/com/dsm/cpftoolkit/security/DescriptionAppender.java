@@ -16,8 +16,6 @@ final class DescriptionAppender {
     DescriptionAppender(ReasonProvider reasonProvider, MessageBus messageBus) {
         this.reasonProvider = reasonProvider;
         this.messageBus = messageBus;
-
-        loadMessageCatalog();
     }
 
     private void loadMessageCatalog() {
