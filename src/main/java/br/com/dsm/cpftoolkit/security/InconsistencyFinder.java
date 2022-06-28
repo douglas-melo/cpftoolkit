@@ -16,8 +16,6 @@ final class InconsistencyFinder {
 
     InconsistencyFinder(UntrustedCPF cpf) {
         this.cpf = cpf;
-
-        findForInconsistency();
     }
 
     private List<EvaluableCPF> listOfHandlers() {
