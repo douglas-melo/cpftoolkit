@@ -7,13 +7,13 @@ import java.util.Map;
  * Esta classe mapeia a mensagem de descrição ao motivo da validação.
  * A captura da mensagem de descrição será feita a partir do critério do motivo da validação.
  */
-final class MessageReporter {
+final class DescriptionAppender {
 
     private final ReasonProvider reasonProvider;
     private final MessageBus messageBus;
     private String message;
 
-    MessageReporter(ReasonProvider reasonProvider, MessageBus messageBus) {
+    DescriptionAppender(ReasonProvider reasonProvider, MessageBus messageBus) {
         this.reasonProvider = reasonProvider;
         this.messageBus = messageBus;
 
