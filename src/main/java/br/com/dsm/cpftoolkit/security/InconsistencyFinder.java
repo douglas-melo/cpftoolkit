@@ -39,6 +39,6 @@ final class InconsistencyFinder {
     }
 
     public Reason getReason() {
-        return reason;
+        return findForInconsistency();
     }
 }
