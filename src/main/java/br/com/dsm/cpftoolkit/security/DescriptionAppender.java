@@ -18,16 +18,16 @@ final class DescriptionAppender {
         this.descriptionMessage = descriptionMessage;
     }
 
-    private void loadMessageCatalog() {
-        Map<Reason, String> messageCatalog = new HashMap<>();
+    private String findDescriptionByReason() {
+        Map<Reason, String> descriptionByReason = new HashMap<>();
 
-        messageCatalog.put(Reason.NULL_CPF, messageBus.getNullMessage());
-        messageCatalog.put(Reason.EMPTY_CPF, messageBus.getEmptyMessage());
-        messageCatalog.put(Reason.INVALID_PATTERN, messageBus.getPatternMessage());
-        messageCatalog.put(Reason.INVALID_CPF, messageBus.getCheckDigitsMessage());
-        messageCatalog.put(Reason.TRUSTED_CPF, messageBus.getSuccessMessage());
+        descriptionByReason.put(Reason.NULL_CPF, descriptionMessage.getNullCPFMessage());
+        descriptionByReason.put(Reason.EMPTY_CPF, descriptionMessage.getEmptyCPFMessage());
+        descriptionByReason.put(Reason.INVALID_PATTERN, descriptionMessage.getInvalidCPFPatternMessage());
+        descriptionByReason.put(Reason.INVALID_CPF, descriptionMessage.getInvalidCPFMessage());
+        descriptionByReason.put(Reason.TRUSTED_CPF, descriptionMessage.getTrustedCPFMessage());
 
-        message = messageCatalog.get(reasonProvider.getReason());
+        return descriptionByReason.get(inconsistencyFinder.getReason());
     }
 
     public String reportMessage() {
