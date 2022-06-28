@@ -11,7 +11,6 @@ final class DescriptionAppender {
 
     private final InconsistencyFinder inconsistencyFinder;
     private final DescriptionMessage descriptionMessage;
-    private String message;
 
     DescriptionAppender(InconsistencyFinder inconsistencyFinder, DescriptionMessage descriptionMessage) {
         this.inconsistencyFinder = inconsistencyFinder;
