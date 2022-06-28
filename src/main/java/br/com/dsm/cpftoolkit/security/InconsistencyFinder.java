@@ -12,7 +12,6 @@ import java.util.List;
 final class InconsistencyFinder {
 
     private final UntrustedCPF cpf;
-    private Reason reason;
 
     InconsistencyFinder(UntrustedCPF cpf) {
         this.cpf = cpf;
