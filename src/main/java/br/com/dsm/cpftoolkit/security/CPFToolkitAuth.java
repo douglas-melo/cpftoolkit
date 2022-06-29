@@ -14,13 +14,12 @@ public final class CPFToolkitAuth {
      * @param cpf O CPF, necessário para inicializar o atributo.
      */
     public CPFToolkitAuth(String cpf) {
-        statusProvider = new StatusReporter(cpf)
-                .putUnstrustedCPF()
-                .putUnstrustedCPFValidator()
-                .putReasonProvider()
-                .putMessageBus()
-                .putMessageReporter()
-                .report();
+        statusProvider = new StatusProviderBuilder(cpf)
+                .setUnstrustedCPF()
+                .setInconsistencyFinder()
+                .setDescriptionMessage()
+                .setDescriptionAppender()
+                .build();
     }
 
     /**
@@ -83,7 +82,7 @@ public final class CPFToolkitAuth {
      * Retorna uma mensagem com a descrição do status da validação.
      * @return Uma String como mensagem de descrição do status da validação.
      */
-    public String getMessage() {
-        return statusProvider.provideMessage();
+    public String getDescription() {
+        return statusProvider.provideDescription();
     }
 }
