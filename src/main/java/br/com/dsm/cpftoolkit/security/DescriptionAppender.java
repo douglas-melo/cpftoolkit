@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
- * Esta classe mapeia a mensagem de descrição ao motivo da validação.
+ * Esta classe anexa a mensagem de descrição ao motivo da validação.
  * A captura da mensagem de descrição será feita a partir do critério do motivo da validação.
  */
 final class DescriptionAppender {
