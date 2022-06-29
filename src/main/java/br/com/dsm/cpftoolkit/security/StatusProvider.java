@@ -6,27 +6,27 @@ package br.com.dsm.cpftoolkit.security;
  */
 final class StatusProvider {
 
-    private final ReasonProvider reasonProvider;
-    private final MessageReporter messageReporter;
+    private final InconsistencyFinder inconsistencyFinder;
+    private final DescriptionAppender descriptionAppender;
 
-    StatusProvider(ReasonProvider reasonProvider, MessageReporter messageReporter) {
-        this.reasonProvider = reasonProvider;
-        this.messageReporter = messageReporter;
+    StatusProvider(InconsistencyFinder inconsistencyFinder, DescriptionAppender descriptionAppender) {
+        this.inconsistencyFinder = inconsistencyFinder;
+        this.descriptionAppender = descriptionAppender;
     }
 
     public String provideReason() {
-        return reasonProvider.getReason().toString();
+        return inconsistencyFinder.getReason().toString();
     }
 
     public boolean provideStatus() {
-        return reasonProvider.getReason().hasTrustedStatus();
+        return inconsistencyFinder.getReason().hasTrustedStatus();
     }
 
     public int provideCode() {
-        return reasonProvider.getReason().getCode();
+        return inconsistencyFinder.getReason().getCode();
     }
 
-    public String provideMessage() {
-        return messageReporter.reportMessage();
+    public String provideDescription() {
+        return descriptionAppender.getDescription();
     }
 }
