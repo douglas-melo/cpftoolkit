@@ -29,8 +29,7 @@ final class InconsistencyFinder {
     }
 
     private Reason findForInconsistency() {
-        return listOfHandlers()
-                .stream()
+        return listOfHandlers().stream()
                 .filter(e -> e.validateDigits() == 1)
                 .map(e -> e.getReason())
                 .findFirst()
