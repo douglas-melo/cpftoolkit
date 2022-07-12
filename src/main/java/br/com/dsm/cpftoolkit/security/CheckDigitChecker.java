@@ -3,9 +3,9 @@ package br.com.dsm.cpftoolkit.security;
 import java.util.Arrays;
 
 /*
- * Classe para validar o dígito verificador do CPF inconsistente.
+ * Classe para calcular o dígito verificador do CPF inconsistente.
  *
- * Possui os métodos para validar o dígito verificador a fim
+ * Possui os métodos para calcular o dígito verificador a fim
  * de verificar a consistência do CPF.
  */
 class CheckDigitChecker {
