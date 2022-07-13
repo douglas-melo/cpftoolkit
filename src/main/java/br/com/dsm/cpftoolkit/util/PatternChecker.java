@@ -14,11 +14,11 @@ final class PatternChecker {
         this.cpf = cpf;
     }
 
-    public static PatternChecker configureCPF(String cpf) {
+    public static PatternChecker getInstance(String cpf) {
         return new PatternChecker(cpf);
     }
 
-    public String getCPF() {
+    public String checkCPFPattern() {
         return new PatternHandler(
                 new EmptyHandler(
                         new NullHandler(
