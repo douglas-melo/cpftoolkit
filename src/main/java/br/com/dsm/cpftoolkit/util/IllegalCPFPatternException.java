@@ -2,8 +2,9 @@ package br.com.dsm.cpftoolkit.util;
 
 /*
  * Esta exceção será lançada nos casos em que um CPF com o padrão dos dígitos
- * inconsistente for passado, e.g. um CPF com todos os 11 dígitos repetidos,
- * ou com caracteres não permitidos.
+ * inconsistente for passado.
+ *
+ * e.g. um CPF com todos os 11 dígitos repetidos, ou com caracteres não permitidos.
  */
 final class IllegalCPFPatternException extends IllegalCPFArgumentException {
 

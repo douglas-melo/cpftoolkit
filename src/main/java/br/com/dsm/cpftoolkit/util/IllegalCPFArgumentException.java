@@ -2,7 +2,9 @@ package br.com.dsm.cpftoolkit.util;
 
 /*
  * Esta exceção será lançada nos casos em que um CPF inconsistente for
- * passado, e.g um CPF nulo, ou vazio, que dentro do contexto da aplicação são inválidos.
+ * passado como argumento.
+ *
+ * e.g. um CPF nulo, ou vazio, que dentro do contexto da aplicação são inválidos.
  */
 class IllegalCPFArgumentException extends IllegalArgumentException {
 
