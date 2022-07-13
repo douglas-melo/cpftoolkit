@@ -6,16 +6,16 @@ package br.com.dsm.cpftoolkit.util;
  * Recebe da API o CPF, faz a verificação em cada objeto manipulador
  * em busca de incosistências, e fornece para API uma instância estática da classe.
  */
-final class PatternValidator {
+final class PatternChecker {
 
     private final String cpf;
 
-    private PatternValidator(String cpf) {
+    private PatternChecker(String cpf) {
         this.cpf = cpf;
     }
 
-    public static PatternValidator configureCPF(String cpf) {
-        return new PatternValidator(cpf);
+    public static PatternChecker configureCPF(String cpf) {
+        return new PatternChecker(cpf);
     }
 
     public String getCPF() {
