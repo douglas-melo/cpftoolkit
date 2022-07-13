@@ -1,17 +1,17 @@
 package br.com.dsm.cpftoolkit.util;
 
-import java.util.Optional;
-import java.util.regex.Pattern;
-
 /*
- * Classe responsável pela validação do padrão dos dígitos do CPF.
+ * Classe responsável pela verificação do padrão dos dígitos do CPF.
+ *
+ * Recebe da API o CPF, faz a verificação em cada objeto manipulador
+ * em busca de incosistências, e fornece para API uma instância estática da classe.
  */
-public final class PatternValidator {
+final class PatternValidator {
 
     private final String cpf;
 
     private PatternValidator(String cpf) {
-        this.cpf = checkPatternConsistency(checkEmptyOccurrences(checkNullOccurrences(cpf)));
+        this.cpf = cpf;
     }
 
     public static PatternValidator configureCPF(String cpf) {
@@ -19,42 +19,12 @@ public final class PatternValidator {
     }
 
     public String getCPF() {
-        return cpf;
-    }
-
-    private String getIllegalCPFArgumentMessage() {
-        return "Este CPF não possui um padrão de dígitos válido.";
-    }
-
-    private String getIllegalCPFPatternMessage(String cpf) {
-        return "O CPF " + cpf + " não possui um padrão de dígitos válido.";
-    }
-
-    private String checkNullOccurrences(String cpf) {
-        return Optional
-                .ofNullable(cpf)
-                .orElseThrow(() -> new IllegalCPFArgumentException(getIllegalCPFArgumentMessage()));
-    }
-
-    private String checkEmptyOccurrences(String cpf) {
-        return Optional
-                .of(cpf)
-                .filter(p -> !p.trim().isEmpty())
-                .orElseThrow(() -> new IllegalCPFArgumentException(getIllegalCPFArgumentMessage()));
-    }
-
-    private String removeDelimiter(String cpf) {
-        return cpf.replaceAll("[\\s.\\-]", "");
-    }
-
-    private String checkPatternConsistency(String cpf) {
-        final String CPF_REGEX_PATTERN = "^(\\d)(?!\\1+$)\\d{10}$";
-
-        final String trimmedCPF = removeDelimiter(cpf);
-
-        if (!Pattern.matches(CPF_REGEX_PATTERN, trimmedCPF)) {
-            throw new IllegalCPFPatternException(getIllegalCPFPatternMessage(cpf));
-        }
-        return trimmedCPF;
+        return new PatternHandler(
+                new EmptyHandler(
+                        new NullHandler(
+                                new UntrustedCPF(cpf)
+                        )
+                )
+        ).checkPatternConsistency();
     }
 }
