@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Possui os métodos para calcular o dígito verificador a fim
  * de verificar a consistência do CPF.
  */
-class CheckDigitChecker {
+final class CheckDigitChecker {
 
     private final String cpf;
 
@@ -16,7 +16,7 @@ class CheckDigitChecker {
         this.cpf = cpf;
     }
 
-    final public int validateCheckDigit() {
+    public int validateCheckDigit() {
         return getCPFCheckDigits().equals(getFirstCheckDigit() + "" + getSecondCheckDigit()) ? 0 : 1;
     }
 
