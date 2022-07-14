@@ -6,7 +6,7 @@ package br.com.dsm.cpftoolkit.security;
  * Possui os métodos para validar o dígito verificador a fim
  * de obter um CPF consistente.
  */
-final class  CheckDigitHandler implements EvaluableCPF {
+final class CheckDigitHandler implements EvaluableCPF {
 
     private final UntrustedCPF cpf;
 
