@@ -15,7 +15,12 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
-    testImplementation('junit:junit:4.13')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
     implementation 'com.github.douglas-melo:cpftoolkit:0.1.0-beta'
 }
